@@ -55,9 +55,8 @@ export class ProductListComponent implements OnInit{
 
     performFilter(filterBy: string): IProduct[] {
         filterBy = filterBy.toLocaleLowerCase();
-        return this.products.filter(function(product){
-            product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1;
-        });
+        return this.products.filter((product: IProduct)=>
+            product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
     }
 
     toggleImage(): void{
