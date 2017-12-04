@@ -55,6 +55,7 @@ export class ProductListComponent implements OnInit{
 
     performFilter(filterBy: string): IProduct[] {
         filterBy = filterBy.toLocaleLowerCase();
+        console.log('check');
         return this.products.filter((product: IProduct)=>
             product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
     }
